@@ -16,7 +16,9 @@ class App extends Component {
   }
 
   deleteLetterHandler = (index) => {
-    const lettersAry = [...this.state.wordArr]; //ary copied!
+    //console.log ('word',this.state.word);
+
+    const lettersAry = this.state.word.split('');
     lettersAry.splice(index, 1);
     this.setState({ wordArr: lettersAry });
     const joinedBack = lettersAry.join('');
@@ -30,10 +32,10 @@ class App extends Component {
         <CharComponent
           key={index + "a"}
           letter={letter}
-          click={this.deleteLetterHandler.bind(this, index)} />
+          click={()=>this.deleteLetterHandler(index)} />
       )
     })
-    
+
     return (
       <div className="App">
         <h1>word 2 letters</h1>

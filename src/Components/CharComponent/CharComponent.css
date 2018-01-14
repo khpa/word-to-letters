@@ -2,7 +2,8 @@
     display: inline-block;
     padding: 16px;
     text-align: center;
-    margin:16px;
+    margin: 16px;
     border: 1px solid black;
-    font-size: 2em;
+    font-size:2em;
+    cursor: pointer;
 }
